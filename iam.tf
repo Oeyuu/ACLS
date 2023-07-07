@@ -16,7 +16,7 @@ resource "aws_iam_role" "iam-role" {
           "aws:SourceAccount": "143805577160"
         },
         "ArnLike": {
-          "aws:SourceArn": "arn:aws:kafka:eu-central-1:143805577160:cluster/mskcluster/b9ccfbb6-69d3-4763-a8c5-80a7e7124097-8"
+          "aws:SourceArn": "arn:aws:kafka:eu-central-1:143805577160:cluster/mskcluster/fdcaf329-96b1-4dfb-b419-e1b6aef36ebf-8"
         }
       }
     }   
@@ -47,9 +47,9 @@ resource "aws_iam_policy" "iam-policy" {
                 "kafka-cluster:*"
             ],
             "Resource": [
-                "arn:aws:kafka:eu-central-1:143805577160:cluster/mskcluster/b9ccfbb6-69d3-4763-a8c5-80a7e7124097-8",
-                "arn:aws:kafka:eu-central-1:143805577160:topic/mskcluster/b9ccfbb6-69d3-4763-a8c5-80a7e7124097-8/*",
-                "arn:aws:kafka:eu-central-1:143805577160:group/mskcluster/b9ccfbb6-69d3-4763-a8c5-80a7e7124097-8/*",
+                "arn:aws:kafka:eu-central-1:143805577160:cluster/mskcluster/fdcaf329-96b1-4dfb-b419-e1b6aef36ebf-8",
+                "arn:aws:kafka:eu-central-1:143805577160:topic/mskcluster/fdcaf329-96b1-4dfb-b419-e1b6aef36ebf-8*",
+                "arn:aws:kafka:eu-central-1:143805577160:group/mskcluster/fdcaf329-96b1-4dfb-b419-e1b6aef36ebf-8*",
                 "*"
             ]
         }
