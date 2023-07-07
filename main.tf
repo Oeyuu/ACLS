@@ -6,3 +6,7 @@ provider "kafka" {
   tls_enabled       = true
   skip_tls_verify   = false 
 }
+
+provider "aws" {
+  region = "eu-central-1"
+}
