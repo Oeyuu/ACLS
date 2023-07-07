@@ -13,10 +13,10 @@ resource "aws_iam_role" "iam-role" {
       "Action": "sts:AssumeRole",
       "Condition": {
         "StringEquals": {
-          "aws:SourceAccount": "Account-ID"
+          "aws:SourceAccount": "143805577160"
         },
         "ArnLike": {
-          "aws:SourceArn": "${data.aws_msk_cluster.msk_cluster.arn}"
+          "aws:SourceArn": "arn:aws:kafka:eu-central-1:143805577160:cluster/mskcluster/b9ccfbb6-69d3-4763-a8c5-80a7e7124097-8"
         }
       }
     }   
@@ -25,13 +25,14 @@ resource "aws_iam_role" "iam-role" {
 EOF
 }
 
-locals {
-    msk_cluster_id = split("/", split(":", data.aws_msk_cluster.this.id)[5])[2]
-}
+# locals {
+#     msk_cluster_id = split("/", split(":", data.aws_msk_cluster.this.id)[5])[2]
+#${data.aws_msk_cluster.msk_cluster.arn}
+# }
 
 resource "aws_iam_policy" "iam-policy" {
   name        = "super_user_role-policy"
-  description = "A test policy${data.aws_msk_cluster.msk_cluster.arn}"
+  description = "A test policy"
 
   policy = <<EOF
 {
