@@ -6,7 +6,7 @@ resource "kafka_acl" "super_user_cluster_alter" {
   resource_type       = "Cluster"
   resource_name       = "kafka-cluster"
   lifecycle {
-    prevent_destroy = true
+    #prevent_destroy = true
   }
 }
 
@@ -19,7 +19,7 @@ resource "kafka_acl" "super_user_cluster_alter_config" {
   resource_type       = "Cluster"
   resource_name       = "kafka-cluster"
   lifecycle {
-    prevent_destroy = true
+    #prevent_destroy = true
   }
 }
 
@@ -32,7 +32,7 @@ resource "kafka_acl" "super_user_cluster_create" {
   resource_type       = "Cluster"
   resource_name       = "kafka-cluster"
   lifecycle {
-    prevent_destroy = true
+    #prevent_destroy = true
   }
 }
 
@@ -45,7 +45,7 @@ resource "kafka_acl" "super_user_cluster_describe" {
   resource_type       = "Cluster"
   resource_name       = "kafka-cluster"
   lifecycle {
-    prevent_destroy = true
+    #prevent_destroy = true
   }
 }
 
@@ -58,7 +58,7 @@ resource "kafka_acl" "super_user_cluster_describe_configs" {
   resource_type       = "Cluster"
   resource_name       = "kafka-cluster"
   lifecycle {
-    prevent_destroy = true
+    #prevent_destroy = true
   }
 }
 
@@ -71,7 +71,7 @@ resource "kafka_acl" "super_user_topics" {
   resource_type       = "Topic"
   resource_name       = "*"
   lifecycle {
-    prevent_destroy = true
+    #prevent_destroy = true
   }
 }
 
@@ -84,6 +84,6 @@ resource "kafka_acl" "super_user_groups" {
   resource_type       = "Group"
   resource_name       = "*"
   lifecycle {
-    prevent_destroy = true
+    #prevent_destroy = true
   }
 }
