@@ -7,8 +7,13 @@ terraform {
 
   required_providers {
     kafka = {
-        source = "mongey/kafka"
-        version = "0.5.2"
+      source  = "mongey/kafka"
+      version = "0.5.2"
+    }
+
+    aws = {
+      version = "4.45.0"
     }
   }
 }
+
