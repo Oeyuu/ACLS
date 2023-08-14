@@ -17,5 +17,5 @@ variable "msk_cluster_name" {
 
 variable "iam_role_name" {
   type = string
-  default = "super_user"
+  default = "super_user_role"
 }
